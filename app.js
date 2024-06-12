@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	
 	function sendOrderToTelegram(orderDetails) {
-		let data = {
+		const data = {
 			new: n,
 			product: `${orderDetails.items.map(item => item.name).join(', ')}`,
 			summa: `${orderDetails.total}₽`,
