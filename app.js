@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (type === 'delivery') {
 				orderDetails.details = {
-					street: document.getElementById('street').value,
-					house: document.getElementById('house').value,
+					street: document.getElementById("Ул").value,
+					house: document.getElementById("номер дома").value,
 					apartment: document.getElementById('apartment').value,
 					deliveryTime: document.getElementById('deliveryTime').value,
 					comments: document.getElementById('comments').value
