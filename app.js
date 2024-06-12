@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function sendOrderToTelegram(orderDetails) {
-		const message = `
+		const data = `
 			Новый заказ:
 			Товары: ${orderDetails.items.map(item => item.name).join(', ')}
 			Общая сумма: $${orderDetails.total}
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		`;
 
 		// Используем Telegram Web App API для отправки сообщения
-		tg.sendData(JSON.stringify(message));
+		tg.sendData(JSON.stringify(data));
 	}
 });
 
