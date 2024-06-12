@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (type === 'delivery') {
 				orderDetails.details = {
 					Ул: document.getElementById('street').value,
-					номердома : document.getElementById("номер дома").value,
+					номердома : document.getElementById('house').value,
 					квартира: document.getElementById('apartment').value,
 					время_доставки: document.getElementById('deliveryTime').value,
 					Коментария: document.getElementById('comments').value
