@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 	function sendOrderToTelegram(orderDetails) {
 		let product =`${orderDetails.items.map(item => item.name).join(', ')}`;
-		let price = `${orderDetails.total}₽`;
+		let price = `${orderDetails.total}`;
 		let tip= `${orderDetails.deliveryType}`;
 		let details=`${JSON.stringify(orderDetails.details, null, 2)}`;		
 		const data = {
