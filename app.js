@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const data = `
 			Новый заказ:
 			Товары: ${orderDetails.items.map(item => item.name).join(', ')}
-			Общая сумма: $${orderDetails.total}
+			Общая сумма: ${orderDetails.total}₽
 			Тип доставки: ${orderDetails.deliveryType}
 			Детали: ${JSON.stringify(orderDetails.details, null, 2)}
 		`;
