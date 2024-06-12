@@ -94,12 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			if (type === 'delivery') {
 				orderDetails.details = {
-					street: document.getElementById("Ул").value,
-					house: document.getElementById("номер дома").value,
-					apartment: document.getElementById('apartment').value,
-					deliveryTime: document.getElementById('deliveryTime').value,
-					comments: document.getElementById('comments').value
-				};
+					Ул: document.getElementById('street').value,
+					номердома : document.getElementById("номер дома").value,
+					квартира: document.getElementById('apartment').value,
+					время_доставки: document.getElementById('deliveryTime').value,
+					Коментария: document.getElementById('comments').value
+				}
 			} else if (type === 'in-house') {
 				orderDetails.details = {
 					table: document.getElementById('table').value,
