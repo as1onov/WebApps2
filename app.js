@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.getElementById('submitOrder').addEventListener('click', function () {
 			const orderDetails = {
 				items: cart,
-				total: cart.reduce((sum, item) => sum + item.price, 0).toFixed(2),
+				total: cart.reduce((sum, item) => sum + item.price, 0),
 				deliveryType: type,
 				details: {}
 			};
