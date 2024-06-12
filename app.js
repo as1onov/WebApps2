@@ -120,18 +120,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	
 	function sendOrderToTelegram(orderDetails) {
+
+		let product =`${orderDetails.items.map(item => item.name).join(', ')}`;
+ 		let price = `${orderDetails.total}₽`;
+		let tip= `${orderDetails.deliveryType}`;
+		let details=`${JSON.stringify(orderDetails.details, null, 2)}`;
+
+
 		const data = {
-			new: n,
-			product: `${orderDetails.items.map(item => item.name).join(', ')}`,
-			summa: `${orderDetails.total}₽`,
-			dostavka: `${orderDetails.deliveryType}`,
-			detali: `${JSON.stringify(orderDetails.details, null, 2)}`
+			//new: n,
+			product: product,
+			summa: price,
+			dostavka: tip,
+			detali: details
 		}
 
 		// Используем Telegram Web App API для отправки сообщения
 		tg.sendData(JSON.stringify(data));
 	}
-});
 
 
 
