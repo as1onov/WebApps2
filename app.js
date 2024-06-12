@@ -1,3 +1,4 @@
+let tg = window.Telegram.WebApp;
 document.addEventListener('DOMContentLoaded', function () {
 	const cart = [];
 	const buttons = document.querySelectorAll('.btn');
