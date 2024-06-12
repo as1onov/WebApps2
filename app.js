@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		`;
 
 		// Используем Telegram Web App API для отправки сообщения
-		Telegram.WebApp.sendData(message);
+		tg.WebApp.sendData(message);
 	}
 });
 
