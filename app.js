@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			// Отправка данных в Telegram чат-бота
 			sendOrderToTelegram(orderDetails);
+			tg.close();
 		});
 	}
 
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		`;
 
 		// Используем Telegram Web App API для отправки сообщения
-		tg.WebApp.sendData(message);
+		tg.sendData(JSON.stringify(message));
 	}
 });
 
