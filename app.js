@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			total += item.price;
 		});
 		const totalElement = document.createElement('div');
-		totalElement.textContent = `Опщая сумма: ${total.toFixed(2)}₽`;
+		totalElement.textContent = `Опщая сумма: ${total}.00₽`;
 		userCard.appendChild(totalElement);
 
 		if (cart.length > 0) {
