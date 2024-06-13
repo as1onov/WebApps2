@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				details: {}
 			};
 
-			if (type === 'delivery') {
+			if (type === 'Доставка') {
 				orderDetails.details = {
 					Ул: document.getElementById('street').value,
 					номердома : document.getElementById('house').value,
