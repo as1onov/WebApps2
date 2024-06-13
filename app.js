@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	document.getElementById('delivery').addEventListener('click', function () {
-		showDeliveryForm('delivery');
+		showDeliveryForm('Доставка');
 	});
 
 	document.getElementById('in-house').addEventListener('click', function () {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		deliveryForm.innerHTML = '';
 		let formContent = '';
 
-		if (type === 'delivery') {
+		if (type === 'Доставка') {
 			formContent = `
 				<h3>Введите адрес доставки</h3>
 				<input type="text" id="street" placeholder="Улица"><br>
