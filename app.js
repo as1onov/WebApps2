@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			total += item.price;
 		});
 		const totalElement = document.createElement('div');
-		totalElement.textContent = `Опщая сумма: ${total}.00₽`;
+		totalElement.textContent = `Общая сумма: ${total}.00₽`;
 		userCard.appendChild(totalElement);
 
 		if (cart.length > 0) {
@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	document.getElementById('in-house').addEventListener('click', function () {
-		showDeliveryForm('in-house');
+		showDeliveryForm('в_самом_здани');
 	});
 
 	document.getElementById('pickup').addEventListener('click', function () {
-		showDeliveryForm('pickup');
+		showDeliveryForm('самовывоз');
 	});
 
 	function showDeliveryForm(type) {
@@ -66,16 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				<input type="time" id="deliveryTime"><br>
 				<textarea id="comments" placeholder="Комментарии"></textarea><br>
 			`;
-		} else if (type === 'in-house') {
+		} else if (type === 'в_самом_здани') {
 			formContent = `
 				<h3>Заказ в самом здании</h3>
 				<input type="text" id="table" placeholder="Номер стола"><br>
 				<textarea id="comments" placeholder="Комментарии"></textarea><br>
 			`;
-		} else if (type === 'pickup') {
+		} else if (type === 'самовывоз') {
 			formContent = `
 				<h3>Самовывоз</h3>
-				<input type="text" id="pickupTime" placeholder="Время самовывоза"><br>
+				<input type="time" id="pickupTime"><br>
 				<textarea id="comments" placeholder="Комментарии"></textarea><br>
 			`;
 		}
@@ -100,15 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
 					время_доставки: document.getElementById('deliveryTime').value,
 					Коментария: document.getElementById('comments').value
 				}
-			} else if (type === 'in-house') {
+			} else if (type === 'в_самом_здани') {
 				orderDetails.details = {
-					table: document.getElementById('table').value,
-					comments: document.getElementById('comments').value
+					Номер_стола: document.getElementById('table').value,
+					Коментария: document.getElementById('comments').value
 				};
-			} else if (type === 'pickup') {
+			} else if (type === 'самовывоз') {
 				orderDetails.details = {
-					pickupTime: document.getElementById('pickupTime').value,
-					comments: document.getElementById('comments').value
+					время_самовывоза: document.getElementById('pickupTime').value,
+					Коментария: document.getElementById('comments').value
 				};
 			}
 
