@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				<input type="text" id="street" placeholder="Улица"><br>
 				<input type="text" id="house" placeholder="Номер дома"><br>
 				<input type="text" id="apartment" placeholder="Квартира"><br>
-				<input type="text" id="deliveryTime" placeholder="Время доставки"><br>
+				<input type="time" id="deliveryTime"><br>
 				<textarea id="comments" placeholder="Комментарии"></textarea><br>
 			`;
 		} else if (type === 'in-house') {
