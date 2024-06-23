@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			`;
 		} else if (type === 'в_самом_здани') {
 			formContent = `
-				<h3>Заказ в самом здании</h3>
+				<h3>Предзаказ заказ в самом здании</h3>
 				<input type="text" id="table" placeholder="Номер стола"><br>
 				<textarea id="comments" placeholder="Комментарии"></textarea><br>
 			`;
