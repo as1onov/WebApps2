@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let price = `${orderDetails.total}`;
 		let tip= `${orderDetails.deliveryType}`;
 		let details=`${JSON.stringify(orderDetails.details, null, 2)}`;		
-		const data = {
+		const datas = {
 			product: product,
 			price: price,
 			tip: tip,
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		// Используем Telegram Web App API для отправки сообщения
-		tg.sendData(JSON.stringify(data));
+		tg.sendData(JSON.stringify(datas));
 	}
 });
 
